@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" type=text/css href=beekeeper.css />
+    <title>BeeKeeper</title>
+
+    <script type="text/javascript" src="Beekeeper.js">
+    </script>
+
+</head>
+
+<body>
+    <div id="center">
+        <h1 class="header">Welcome to Beekeeper</h1>
+        <img src="beekeeperimage.jpg" alt="Beekeeper">
+    </div>
+
+    <fieldset>
+        <form name="signup" action="bee-keeper_completed.html" onsubmit="return checkPassword(), validateUser()"
+            method="GET">
+
+
+            <div class="container">
+                <h1>Sign Up Below</h1>
+
+
+                <div>
+                    <label for="username"><b>Username</b></label>
+                    <input type="username" placeholder="Enter Username" name="username" required
+                        onkeyup="reservedUser()">
+                </div>
+
+                <div>
+                    <label for="email"><b>Email Address</b></label>
+                    <input type="text" placeholder="Enter Email" name="email" required>
+                </div>
+
+                <div>
+                    <label for="birthday"><b>Birthday</b></label>
+                    <input type="date" name="birthday" required>
+                </div>
+
+                <div>
+                    <label for="pswd"><b>Password</b></label>
+                    <input type="password" placeholder="Enter Password" name="pswd" required>
+                </div>
+
+                <div>
+                    <label for="checkpswd"><b>Verify Password</b></label>
+                    <input type="password" placeholder="RE-Enter Password" name="checkpswd" required>
+                </div>
+
+                <label><b>Desired Account Type</b></label>
+
+                <input type="radio" id="personal" name="account" value=" personal" checked="checked">
+                <label for="personal">Personal</label>
+
+                <input type="radio" id="business" name="account" value=" business">
+                <label for="business">Business</label>
+
+                <input type="radio" id="enterprise" name="account" value=" enterprise">
+                <label for="enterprise">Enterprise</label>
+
+                <input type="radio" id="other" name="account" value=" Other">
+                <label for="other">Other</label>
+
+                <p>Personal accounts allow only 1 private repo, please visit our <a href="https://www.amazon.com"> main
+                        site</a> for more information</p>
+
+                <table>
+                    <tr>
+                        <th></th>
+                        <th>Personal(1-3 users)</th>
+                        <th>Business(4-20 users)</th>
+                        <th>Enterprise(21+ user)</th>
+                    </tr>
+
+                    <tr>
+                        <td>1 repo</td>
+                        <td>free</td>
+                        <td>$12/month</td>
+                        <td rowspan=3>Contact sales</td>
+                    </tr>
+
+                    <tr>
+                        <td>2-9 repos</td>
+                        <td>$8 repo/month</td>
+                        <td>$10 repo/month</td>
+                    </tr>
+
+                    <tr>
+                        <td>10+ repo</td>
+                        <td>$6 repo/month</td>
+                        <td>$8 repo/month</td>
+                    </tr>
+                </table>
+
+                <input type="submit" value = "Submit">
+
+            </div>
+        </form>
+
+    </fieldset>
+</body>
+
+</html>

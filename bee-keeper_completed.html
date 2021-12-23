@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang = "en">
+    <head>
+        <title>Beekeeper</title>
+        <link rel= "stylesheet" type = "text/css" href = "beekeeper.css" />
+    </head>
+<body>
+    <div id = "center">
+        <h1 class="header">Welcome to Beekeeper</h1>
+        <img src="beekeeperimage.jpg" alt="Beekeeper">
+
+        <h1 id = "hello" style = "color: black;"></h1>
+        <p style= "color: black;"> Acount Information Available Below</p>
+    </div>
+
+    <table id = "Information">
+    </table>
+
+<script>
+    function UserInfo()
+    {
+        var parameters = location.search.substring(6).split("&");
+
+
+        var bee1 = parameters[0].split("=");
+        name = unescape(bee1[0]);
+
+        var bee2 = parameters[1].split("=");
+        email = unescape(bee2[1]);
+
+        var bee3 = parameters[2].split("=");
+        birthday = unescape(bee3[1]);
+
+        var bee4 = parameters[3].split("=");
+        password = unescape(bee4[1]);
+
+        var bee5 = parameter[5].split("=");
+        account = unescape(bee5[1]);
+
+        document.getElementById("hello").innerHTML = "Hello, " + name;
+
+        document.getElementById("Information").innerHTML = "<tr><th>Username</th> <th>Email Address</th> <th>Birthday</th> <th>Password</th> <th>Account Type</th></tr> ";
+
+        document.getElementById("Information").innerHTML += "<tr><td>" + name + "</td>"+ "<td>"+ email + "</td>"+ "<td>"+ birthday + "</td>"+ "<td>" + password + "</td>" + "<td"> accountType + "</td></td>";
+    }
+    UserInfo()
+</script>
+
+</body>
+</html>
